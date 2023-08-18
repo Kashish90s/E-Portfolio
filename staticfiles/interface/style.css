@@ -165,8 +165,6 @@ a:hover:before {
     font-size: 0.7rem;
 }
 
-
-
 #developer-type {
     color: #ff004f;
 }
@@ -202,7 +200,7 @@ ul {
 }
 
 .logo-link {
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     overflow: hidden;
 }
@@ -380,7 +378,7 @@ ul {
     }
 
     .left-section {
-        padding-left: 4rem;
+        padding-left: 2rem;
     }
 
     #quote-scession {
@@ -475,6 +473,10 @@ ul {
         font-size: 0.6rem !important;
         padding: 3px 0;
         /* Adjust the font size as needed */
+    }
+
+    .second-section {
+        min-height: auto;
     }
 
 }
