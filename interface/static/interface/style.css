@@ -92,6 +92,7 @@ a:hover:before {
     padding-bottom: 35%;
     /* Maintain a 1:1 aspect ratio for the div */
     position: relative;
+    /* margin: 8vh; */
 }
 
 .left-section {
@@ -120,48 +121,12 @@ a:hover:before {
     color: #9e9e9e;
 }
 
-/* Media query for screens with a max-width of 768px */
-@media (max-width: 768px) {
-    .first-section {
-        flex-direction: column-reverse;
-        /* Reverse the order of content */
-        align-items: center;
-        margin: 50px 0;
-        /* Adjust margin for better spacing */
-    }
-
-    .first-section div {
-        width: 70%;
-        height: auto;
-        /* Adjust the width for better text readability */
-        padding-bottom: 70%;
-        /* Maintain a 1:1 aspect ratio for the div */
-        border-radius: 50%;
-    }
-
-    .left-section {
-        font-size: 1.5rem;
-        /* Adjust font size for smaller screens */
-        text-align: center;
-        /* Center the text */
-    }
-
-    .first-section div #profile-image {
-        width: 60%;
-        height: auto;
-        /* left: 20%; */
-        /* top: 10%; */
-        object-fit: cover;
-        border-radius: 50%;
-    }
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;
     /* Change to column layout */
     min-height: 85vh;
-    background-color: #d12158;
+    /* background-color: #d12158; */
     justify-content: center;
     align-items: center;
 }
@@ -170,7 +135,7 @@ a:hover:before {
     max-width: 45vh;
     max-height: 60vh;
     padding: 2rem;
-    background-color: black;
+    background-color: #d12158;
     margin-bottom: 1rem;
     /* Add margin to create space between card and buttons */
 }
@@ -342,8 +307,6 @@ ul {
 }
 
 
-
-/* CSS */
 .submit {
     background: #FF4742;
     border: 1px solid #FF4742;
@@ -382,4 +345,136 @@ ul {
 
 .second-section li {
     padding-bottom: 1rem;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        overflow-x: hidden;
+        font-size: 1.5rem;
+    }
+
+    nav {
+        height: 30px;
+    }
+
+    nav ul li {
+        font-size: 1rem;
+        list-style: none;
+        margin: 0 10px;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .first-section {
+        flex-direction: column-reverse;
+        margin: 2rem;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        font-size: 0.9rem;
+        margin: 0.7rem;
+    }
+
+    .left-section {
+        padding-left: 4rem;
+    }
+
+    #quote-scession {
+        font-size: 0.7rem;
+    }
+
+    .first-section div {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+
+    .left-second-section {
+        display: none;
+    }
+
+    .wrapper {
+        min-height: 50vh;
+        width: auto;
+    }
+
+    .card {
+        font-size: 0.7rem;
+        max-width: 25vh;
+        max-height: 35vh;
+        padding: 1rem;
+        /* margin-bottom: 1rem; */
+        /* Add margin to create space between card and buttons */
+    }
+
+    .submit {
+        font-size: 12px;
+        /* Adjust font size for smaller screens */
+        padding: 8px 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .heading-bar {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    #fourth-section {
+        flex-direction: column;
+    }
+
+    .input {
+        padding: 1rem;
+        min-height: auto;
+    }
+
+    .form__group {
+        padding: 10px 0 0;
+        margin-top: 5px;
+    }
+
+    .form__field {
+        font-size: 0.6rem;
+        padding: 5px 0;
+    }
+
+    .form__label {
+        font-size: 0.2rem;
+    }
+
+    .personal-info {
+        font-size: 0.9rem;
+    }
+
+    .first-section div #profile-image {
+        position: absolute;
+        /* Position the image within the div */
+        width: 80%;
+        /* Make the image take up the entire div */
+        height: 80%;
+    }
+
+    .card img {
+        height: 5rem;
+        width: 5rem;
+        padding: 0.7rem;
+    }
+
+    .right-second-section {
+        font-size: 0.9rem;
+    }
+
+    .features {
+        font-size: 0.5rem;
+    }
+
+    .field .form__label {
+        font-size: 0.6rem !important;
+        padding: 3px 0;
+        /* Adjust the font size as needed */
+    }
+
 }

@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class AboutMe(models.Model):
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=4000)
 
     def __str__(self) -> str:
         return super().__str__()

@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['kashish-ovpa.onrender.com','portfolio.kashishmaharjan.com.np','localhost']
 
@@ -130,12 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 # STATICFILES_STORAGE = "whitenoisestorageCompressedStaticFilesStorage"
-STORAGES = {
-    # ...
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 
 
