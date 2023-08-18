@@ -31,13 +31,13 @@
     <section class="first-section">
       <div class="left-section">
         Hello World! <br />
-        <span>I'am a </span><span id="developer-type">Web Developer</span><br />
+        <span>I'am a </span><span id="developer-type">Web Developer</span><br>
         <span id="quote-scession"></span>
         <div class="socials">
 
           {% for socials in socialLink %}
           {% if socials.instagram %}
-          <a href= "interface/{{ socials.instagram }}" class="logo-link">
+          <a href= "{{ socials.instagram }}" class="logo-link">
             <img id="logo" src="{% static 'interface/insta.png' %}" alt="Instagram">
           </a>
           {% endif %}

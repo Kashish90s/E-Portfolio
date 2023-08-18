@@ -87,6 +87,7 @@ a:hover:before {
 
 .first-section div {
     width: 35%;
+    flex-direction: column;
     height: 0;
     /* Add this line to set the height */
     padding-bottom: 35%;
@@ -354,7 +355,7 @@ ul {
     }
 
     nav {
-        height: 30px;
+        height: 50px;
     }
 
     nav ul li {
@@ -376,7 +377,7 @@ ul {
     .right-section {
         width: 100%;
         height: auto;
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 0.7rem;
     }
 
@@ -394,6 +395,7 @@ ul {
     }
 
     .left-section {
+        width: 100%;
         display: -webkit-inline-box;
     }
 
