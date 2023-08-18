@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="{% static 'interface/style.css' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">Kashish <span id="left">Maharjan</span></div>
+      <div class="right">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#second-section2">About</a></li>
+          <li><a href="#third-section">Projects</a></li>
+          <li><a href="#fourth-section">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="first-section">
+      <div class="left-section">
+        Hello World! <br />
+        <span>I'am a </span><span id="developer-type">Web Developer</span><br />
+        <span id="quote-scession"></span>
+        <div class="socials">
+
+          {% for socials in socialLink %}
+          {% if socials.instagram %}
+          <a href= "interface/{{ socials.instagram }}" class="logo-link">
+            <img id="logo" src="{% static 'interface/insta.png' %}" alt="Instagram">
+          </a>
+          {% endif %}
+
+          {% if socials.twitter %}
+          <a href="{{ socials.twitter }}" class="logo-link">
+            <img id="logo" src="{% static 'interface/twitter.png' %}" alt="Twitter">
+          </a>
+          {% endif %}
+
+          {% if socials.linkedin %}
+          <a href="{{ socials.linkedin }}" class="logo-link">
+            <img id="logo" src="{% static 'interface/linkedin.png' %}" alt="LinkedIn">
+          </a>
+          {% endif %}
+
+          {% if socials.facebook %}
+          <a href="{{ socials.facebook }}" class="logo-link">
+            <img id="logo" src="{% static 'interface/fb.png' %}" alt="Facebook">
+          </a>
+          {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+      <div class="right-section">
+        <img id="profile-image" src="{% static 'interface/maharjan.jpg' %}" alt="" />
+      </div>
+    </section>
+    <nav id="second-section2">
+      <div class="left">About me</div>
+      <div class="right">
+        <ul>
+          <li><a href="#" id="experience" style="color: white;">Experience </a></li>
+          <li><a href="#" id="education">Education</a></li>
+          <li><a href="#" id="skills">Skills</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="second-section" class="second-section">
+      <div class="left-second-section">
+        {% for item in description %} {{item.description}} {% endfor %}
+      </div>
+      <!-- <div class="right-second-section"> -->
+      <div id="exp" class="right-second-section">
+        <ul>
+          {% for exp in experience %}
+          <li>
+            {{ exp.start }} - {{ exp.end }}: {{exp.title}} at {{ exp.company}}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div id="edu" class="right-second-section">
+        <ul>
+          {% for edu in education %}
+          <li>
+            {{ edu.start }} - {{ edu.end }} - {{ edu.industry }} - {{ edu.board }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div id="skill" class="right-second-section">
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: row;flex-wrap: wrap;">
+          {% for item in skill %}
+          <li style="margin-right: 10px;">{{ item.description }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- </div> -->
+    </section>
+
+    </section>
+    <section id="third-section">
+      <div class="heading-bar">Projects</div>
+      <div class="wrapper">
+        <div class="card">
+          {% for item in project %}
+          <div class="project-name">
+            {{ item.projectName }}
+          </div>
+          <img src="{{ item.image.url }}" alt=""><br>
+          <div class="language">
+            Language Used: {{ item.languageUsed }}
+          </div> <br>
+          <div class="features">Features: {{ item.features }}</div> <br>
+          {% endfor %}
+        </div>
+        <div class="buttons">
+          <button class="submit">Previous</button>
+          <button class="submit">Next</button>
+        </div>
+      </div>
+    </section>
+    <div class="heading-bar">Contact</div>
+    <section id="fourth-section">
+
+      <div class="input">
+        <form method="post" name="contact" id="contact">
+          {% csrf_token%}
+          <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Name" name="name" id="name" required />
+            <label for="name" class="form__label">Name</label>
+          </div>
+          <div class="form__group field">
+            <input type="email" class="form__field" placeholder="E-mail" name="email" id="email" required />
+            <label for="email" class="form__label">E-mail</label>
+          </div>
+          <div class="form__group field">
+            <input type="text" class="form__field" placeholder="Subject" name="subject" id="subject" required />
+            <label for="subject" class="form__label">Subject</label>
+          </div>
+          <div class="form__group field">
+            <textarea class="form__field" placeholder="Message" name="message" id="message" rows="4"
+              required></textarea>
+            <label for="message" class="form__label">Message</label>
+          </div>
+          <div class="form__group">
+            <button class="submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="personal-info">
+        kashish <br>
+        kirtipur <br>
+        maharjankashish2@gmail.com
+      </div>
+    </section>
+  </main>
+
+  <script src="{% static 'interface/script.js' %}"></script>
+</body>
+
+</html>
