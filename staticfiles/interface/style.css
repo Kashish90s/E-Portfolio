@@ -200,9 +200,10 @@ ul {
 }
 
 .logo-link {
-    /* display: inline-block; */
+    display: inline-block;
     position: relative;
     overflow: hidden;
+    margin: auto;
 }
 
 #logo {
@@ -373,12 +374,9 @@ ul {
     .left-section,
     .right-section {
         width: 100%;
+        height: auto;
         font-size: 0.9rem;
         margin: 0.7rem;
-    }
-
-    .left-section {
-        padding-left: 2rem;
     }
 
     #quote-scession {
@@ -386,12 +384,15 @@ ul {
     }
 
     .first-section div {
-        width: 50%;
-        padding-bottom: 50%;
+        width: 45%;
+        padding-bottom: 45%;
     }
 
     .left-second-section {
         display: none;
+    }
+    .left-section{
+        
     }
 
     .wrapper {

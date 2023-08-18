@@ -200,10 +200,11 @@ ul {
 }
 
 .logo-link {
-    display: inline-block;
+    display: flex;
     position: relative;
     overflow: hidden;
     margin: auto;
+    padding: 0.2rem;
 }
 
 #logo {
@@ -346,7 +347,7 @@ ul {
     padding-bottom: 1rem;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     body {
         overflow-x: hidden;
         font-size: 1.5rem;
@@ -390,6 +391,10 @@ ul {
 
     .left-second-section {
         display: none;
+    }
+
+    .left-section {
+        display: -webkit-inline-box;
     }
 
     .wrapper {
