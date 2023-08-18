@@ -374,6 +374,7 @@ ul {
     .left-section,
     .right-section {
         width: 100%;
+        height: auto;
         font-size: 0.9rem;
         margin: 0.7rem;
     }
@@ -383,8 +384,8 @@ ul {
     }
 
     .first-section div {
-        width: 50%;
-        padding-bottom: 50%;
+        width: 45%;
+        padding-bottom: 45%;
     }
 
     .left-second-section {
