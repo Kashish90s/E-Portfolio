@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['kashish-ovpa.onrender.com','portfolio.kashishmaharjan.com.np','localhost']
+ALLOWED_HOSTS = ['kashish-ovpa.onrender.com','kashishmaharjan.com.np','localhost']
 
 
 # Application definition
